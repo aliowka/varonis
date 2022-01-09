@@ -1,7 +1,8 @@
 
+from sanic_jwt.decorators import protected
 from app import app
 
-
+@protected
 @app.route("/normalize", methods=["POST",])
 async def normalize(request):
     
