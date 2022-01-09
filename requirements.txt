@@ -1,0 +1,4 @@
+pytest
+sanic
+sanic-jwt
+sanic-testing
