@@ -56,3 +56,14 @@ class TestMagicList(TestCase):
         # index error on set
         with self.assertRaises(IndexError):
             a[100] = 100
+
+
+    def test_setitem(self):
+        @dataclass
+        class Person:
+            age: int = 1
+
+        a = MagicList(cls_type=Person)
+
+        a[0].age = 1
+        self.assertEqual(a[0].age, 1)

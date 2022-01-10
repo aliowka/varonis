@@ -38,4 +38,4 @@ class TestSanicApp(TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertDictEqual(
-            response.body, "{'device': 'strVal', 'isAuthorized': 'boolVal'}")
+            response.json, {'device': 'IPhone', 'isAuthorized': 'false'})

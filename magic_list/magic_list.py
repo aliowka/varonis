@@ -19,3 +19,10 @@ class MagicList(List):
             self.append(value)
         else:
             super().__setitem__(key, value)
+        return self
+
+    def __getitem__(self, key):
+        if self.__len__() == key:
+            # append default value 
+            self.append(self.cls_type() if self.cls_type else 0)
+        return super().__getitem__(key)
